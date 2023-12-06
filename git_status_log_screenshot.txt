@@ -1,0 +1,31 @@
+vncsm@vncsmcd MINGW64 ~/OneDrive/Desktop/CLASSES/CPR101/Project (master)
+$ git ls-files
+V1/converting.c
+V1/converting.h
+V1/fundamentals.c
+V1/fundamentals.h
+V1/main.c
+V1/manipulating.c
+V1/manipulating.h
+V1/tokenizing.c
+V1/tokenizing.h
+V2/converting.c
+V2/fundamentals.c
+V2/main.c
+V2/manipulating.c
+V2/tokenizing.c
+
+vncsm@vncsmcd MINGW64 ~/OneDrive/Desktop/CLASSES/CPR101/Project (master)
+$ git log
+commit e0cb08eb3b5b04cf35e154102b24bdf15455ed56 (HEAD -> master)
+Author: ViniciusLeal <vmacedopereiraleal@myseneca.ca>
+Date:   Wed Dec 6 10:30:16 2023 -0500
+
+    V2
+
+commit d56634e0208962cf24e9b5c93b352709201de0aa
+Author: ViniciusLeal <vmacedopereiraleal@myseneca.ca>
+Date:   Wed Dec 6 10:28:56 2023 -0500
+
+    V1
+
