@@ -6,22 +6,37 @@
 
 
 void converting(void) {
-    // V1
-    printf("*** Start of Converting Strings to int Demo ***\n"); // Prints the start of the converting strings to integer demonstration
+	// V1
+	printf("*** Start of Converting Strings to int Demo ***\n"); // Prints the start of the converting strings to integer demonstration
 
-    char intString[BUFFER_SIZE]; // Declares an array to store a string representing an integer with a size of BUFFER_SIZE
-    int intNumber; // Declares an integer variable to store the converted integer
+	char intString[BUFFER_SIZE]; // Declares an array to store a string representing an integer with a size of BUFFER_SIZE
+	int intNumber; // Declares an integer variable to store the converted integer
 
-    do {
-        printf("Type an int numeric string (q - to quit):\n"); // Prompts the user to input an integer string or 'q' to quit
-        fgets(intString, BUFFER_SIZE, stdin); // Reads the string input from the user and stores it in intString
-        intString[strlen(intString) - 1] = '\0'; // Removes the newline character from the input
-        if (strcmp(intString, "q") != 0) { // Checks if the input is not "q"
-            intNumber = atoi(intString); // Converts the string to an integer using the atoi function
-            printf("Converted number is %d\n", intNumber); // Prints the converted integer
-        }
-    } while (strcmp(intString, "q") != 0); // Loops until the user inputs 'q' to quit
+	do {
+		printf("Type an int numeric string (q - to quit):\n"); // Prompts the user to input an integer string or 'q' to quit
+		fgets(intString, BUFFER_SIZE, stdin); // Reads the string input from the user and stores it in intString
+		intString[strlen(intString) - 1] = '\0'; // Removes the newline character from the input
+		if (strcmp(intString, "q") != 0) { // Checks if the input is not "q"
+			intNumber = atoi(intString); // Converts the string to an integer using the atoi function
+			printf("Converted number is %d\n", intNumber); // Prints the converted integer
+		}
+	} while (strcmp(intString, "q") != 0); // Loops until the user inputs 'q' to quit
 
-    printf("*** End of Converting Strings to int Demo ***\n\n"); // Prints the end of the converting strings to integer demonstration
+	printf("*** End of Converting Strings to int Demo ***\n\n"); // Prints the end of the converting strings to integer demonstration
+
+
+//V2
+	printf("*** Start of Converting Strings to double Demo ***\n");
+	char    doubleString[BUFFER_SIZE];
+	double  doubleNumber;
+	do {
+		printf("Type the double numeric string (q - to quit):\n");
+		fgets(doubleString, BUFFER_SIZE, stdin);
+		doubleString[strlen(doubleString) - 1] = '\0';
+		if (strcmp(doubleString, "q") != 0) {  // Prompts the user for a numeric string then converts it to double until q key is pressed to exit.
+			doubleNumber = atof(doubleString); // Converts strings to double
+			printf("Converted number is %f\n", doubleNumber);
+		}
+	} while (strcmp(doubleString, "q") != 0);
+	printf("*** End of Converting Strings to double Demo ***\n\n");
 }
-

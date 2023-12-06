@@ -29,4 +29,25 @@ void tokenizing(void) {
 
     printf("*** End of Tokenizing Words Demo ***\n\n"); // Prints the end of the word tokenizing demonstration
 
+
+    //V2 
+    printf("*** Start of Tokenizing Phrases Demo ***\n");
+    char  phrases[BUFFER_SIZE];
+    char* nextPhrase = NULL;
+    int   phrasesCounter;
+    do {// Prompts the user for a comma separated string then counts the number of phrases until q key is pressed to exit
+        printf("Type a few phrases separated by comma(q - to quit): \n");
+        fgets(phrases, BUFFER_SIZE, stdin);
+        phrases[strlen(phrases) - 1] = '\0';
+        if ((strcmp(phrases, "q") != 0)) {
+            nextPhrase = strtok(phrases, ",");
+            phrasesCounter = 1;
+            while (nextPhrase) {
+                printf("Phrase #%d is \'%s\'\n", phrasesCounter++, nextPhrase);
+                nextPhrase = strtok(NULL, ",");
+            }
+        }
+    } while (strcmp(phrases, "q") != 0);
+    printf("*** End of Tokenizing Phrases Demo ***\n\n");
+
 }
